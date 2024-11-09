@@ -1,0 +1,12 @@
+version: '3.9'
+ 
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash -c "while true; do sleep infinity; done"
+    tty: true
